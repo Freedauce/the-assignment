@@ -1,0 +1,262 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E7EB;
+}
+
+h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+
+.header {
+    background-color: #1F2937;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #F9FAF8;
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+
+.hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #1F2937;
+    color: #F9FAF8;
+    padding: 40px;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    font-weight: 500;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #E5E7EB;
+}
+
+.hero-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3882F6;
+    color: #F9FAF8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-image img {
+    width: 130%;
+    height: 180px;
+    object-fit: cover; 
+    border-radius: 5px; 
+    margin-top: 10px; 
+    margin-left: 100px;
+}
+
+
+.about-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.about-section h2 {
+    font-size: 36px;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+
+.portfolio-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f4f4;
+}
+
+.portfolio-section h2 {
+    font-size: 36px;
+    font-weight: 900;
+    color: #1F2937;
+    margin-bottom: 20px;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.portfolio-item p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
+.quote-section {
+    background-color: #E5E7EB;
+    padding: 40px;
+    text-align: center;
+    color: #1F2937;
+    font-style: italic;
+    font-size: 36px;
+}
+
+.quote-section cite {
+    display: block;
+    font-size: 18px;
+    color: #1F2937;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+
+.cta-section {
+    background-color: #4285F4;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 900px;
+    margin: 80px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-section p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.cta-section button {
+    display: inline-block;
+    background-color: transparent;
+    color: #333;
+    border: 2px solid white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(148, 18, 18, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.cta-section button:hover {
+    background-color: white;
+    color: #4285F4;
+}
+
+
+.footer {
+    background-color: #1F2937;
+    color: #F9FAF8;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+
+@media (max-width: 1024px) {
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+
+    .cta-section p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+        font-size: 16px;
+    }
+
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-content, .hero-image {
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cta-section {
+        max-width: 100%;
+        margin: 40px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 24px;
+    }
+
+    .hero-content p, .cta-section p {
+        font-size: 14px;
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta-section button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
+}
